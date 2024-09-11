@@ -1,0 +1,23 @@
+/* Styling home page */
+
+/* Styling body element of home page */
+body{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/K.jpeg');
+        background-size: cover;  
+        background-repeat: no-repeat;  
+    }
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.navbar .navbar-brand, .navbar .nav-link {
+    color: white !important; 
+    font-weight: bold;
+    text-align: center;
+}
+
+.navbar .nav-link:hover {
+    color: #ffcc00 !important; 
+    transition: 0.4s;
+}
