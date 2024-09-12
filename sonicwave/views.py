@@ -6,10 +6,12 @@ from .models import Album
 
 # Create your views here.
 class MyLoginView(LoginView):
-    """
-    This class is used to handle user login.
-    It requires the user to provide a valid username and password.
-    The user is then redirected to the home page.
+    """This class is used to handle user login.
+
+        :param str username: Valid username required
+        :param str password: Valid password required
+
+        :returns: Redirects user to the home page 
     """
     template_name = 'login.html'
 
@@ -20,7 +22,7 @@ def home(request):
     It requires the user to be logged in and displays a navigation bar
     with links to the band's about page and album page. The home page
     also displays a Sonicwave logo and a background image of a sound
-    wave. The background image is a linear gradient."""
+    wave. The background image is a linear gradient"""
 
     return render(request, 'home.html')
 
@@ -34,6 +36,6 @@ def about(request):
 def albums(request):
     """This view renders the albums page of the website.
     It displays a list of the band's albums with a link to the information
-    page of each album."""
+    page of each album"""
     albums = Album.objects.all()
     return render(request, 'albums.html', {'albums': albums})
