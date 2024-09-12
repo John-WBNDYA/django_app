@@ -3,8 +3,14 @@ from django.db import models
 # Create your models here.
 class Album(models.Model):
     """This album class will be used to create album objects.
-    It has the following attributes: id, title, release_date, label
-    and description. It has only one method: __str__ method"""
+
+        :Attribute int id: Album ID
+        :Attribute str title: Album title
+        :Attribute date release_date: Album release date 
+        :Attribute str label: Record label 
+        :Attribute str description: Album description
+    
+        :Method: __str__ method"""
  # Manually setting the primary key
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=140)
