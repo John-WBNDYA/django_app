@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Global styles */
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{% static 'images/B1.jpg' %}") no-repeat center center fixed;
+            background-size: cover;
+            color: #e0e0e0; /* Light text color */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffffff; /* White text color for the heading */
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #1f1f1f; /* Slightly lighter dark background for the form */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+        }
+
+        form p {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2e2e2e; /* Darker input background */
+            color: #e0e0e0; /* Light text color */
+        }
+
+        input[type="text"]::placeholder,
+        input[type="password"]::placeholder {
+            color: #888; /* Placeholder text color */
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            background-color: #373737; /* Lighter shade when focused */
+        }
+
+        button {
+            background-color: #ff5722; /* Accent color for the button */
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e64a19; /* Darker shade on hover */
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .signup-link a {
+            color: #ff5722; /* Accent color for the link */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .signup-link a:hover {
+            color: #e64a19; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <div class="text-center text-white">
+            <b> 
+                <!-- Logo of sonicwave -->
+                <img src="{% static 'images/logo.png' %}" alt="Sonicwave logo"
+                  width="200" height="60"> 
+                <h2 class="text-center">Sonicwave</h2> 
+            </b>
+        </div>
+        <br><br><br><br><br><br>
+
+        <!-- Login Form -->
+        <h2>Login</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
+
+

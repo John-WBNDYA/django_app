@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sonicwave package &mdash; band_site 00.00.01 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=d7bb8d4d"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="sonicwave.migrations package" href="sonicwave.migrations.html" />
+    <link rel="prev" title="sonicwave" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            band_site
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">sonicwave</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">sonicwave package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sonicwave.migrations.html">sonicwave.migrations package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-sonicwave.admin">sonicwave.admin module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-sonicwave.apps">sonicwave.apps module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sonicwave.apps.SonicwaveConfig"><code class="docutils literal notranslate"><span class="pre">SonicwaveConfig</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-sonicwave.models">sonicwave.models module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sonicwave.models.Album"><code class="docutils literal notranslate"><span class="pre">Album</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-sonicwave.tests">sonicwave.tests module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-sonicwave.urls">sonicwave.urls module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-sonicwave.views">sonicwave.views module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sonicwave.views.MyLoginView"><code class="docutils literal notranslate"><span class="pre">MyLoginView</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sonicwave.views.about"><code class="docutils literal notranslate"><span class="pre">about()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sonicwave.views.albums"><code class="docutils literal notranslate"><span class="pre">albums()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sonicwave.views.home"><code class="docutils literal notranslate"><span class="pre">home()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-sonicwave">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">band_site</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">sonicwave</a></li>
+      <li class="breadcrumb-item active">sonicwave package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/sonicwave.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sonicwave-package">
+<h1>sonicwave package<a class="headerlink" href="#sonicwave-package" title="Link to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sonicwave.migrations.html">sonicwave.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sonicwave.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sonicwave.migrations.html#module-sonicwave.migrations.0001_initial">sonicwave.migrations.0001_initial module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sonicwave.migrations.html#sonicwave.migrations.0001_initial.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sonicwave.migrations.html#sonicwave.migrations.0001_initial.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="sonicwave.migrations.html#sonicwave.migrations.0001_initial.Migration.initial"><code class="docutils literal notranslate"><span class="pre">Migration.initial</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="sonicwave.migrations.html#sonicwave.migrations.0001_initial.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sonicwave.migrations.html#module-sonicwave.migrations.0002_alter_album_description">sonicwave.migrations.0002_alter_album_description module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sonicwave.migrations.html#sonicwave.migrations.0002_alter_album_description.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sonicwave.migrations.html#sonicwave.migrations.0002_alter_album_description.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="sonicwave.migrations.html#sonicwave.migrations.0002_alter_album_description.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sonicwave.migrations.html#module-sonicwave.migrations.0003_alter_album_description">sonicwave.migrations.0003_alter_album_description module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sonicwave.migrations.html#sonicwave.migrations.0003_alter_album_description.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sonicwave.migrations.html#sonicwave.migrations.0003_alter_album_description.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="sonicwave.migrations.html#sonicwave.migrations.0003_alter_album_description.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sonicwave.migrations.html#module-sonicwave.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-sonicwave.admin">
+<span id="sonicwave-admin-module"></span><h2>sonicwave.admin module<a class="headerlink" href="#module-sonicwave.admin" title="Link to this heading"></a></h2>
+</section>
+<section id="module-sonicwave.apps">
+<span id="sonicwave-apps-module"></span><h2>sonicwave.apps module<a class="headerlink" href="#module-sonicwave.apps" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="sonicwave.apps.SonicwaveConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sonicwave.apps.</span></span><span class="sig-name descname"><span class="pre">SonicwaveConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sonicwave/apps.html#SonicwaveConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sonicwave.apps.SonicwaveConfig" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AppConfig</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sonicwave.apps.SonicwaveConfig.default_auto_field">
+<span class="sig-name descname"><span class="pre">default_auto_field</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'django.db.models.BigAutoField'</span></em><a class="headerlink" href="#sonicwave.apps.SonicwaveConfig.default_auto_field" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sonicwave.apps.SonicwaveConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'sonicwave'</span></em><a class="headerlink" href="#sonicwave.apps.SonicwaveConfig.name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-sonicwave.models">
+<span id="sonicwave-models-module"></span><h2>sonicwave.models module<a class="headerlink" href="#module-sonicwave.models" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="sonicwave.models.Album">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sonicwave.models.</span></span><span class="sig-name descname"><span class="pre">Album</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sonicwave/models.html#Album"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sonicwave.models.Album" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>This album class will be used to create album objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attribute int id<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Album ID</p>
+</dd>
+<dt class="field-even">Attribute str title<span class="colon">:</span></dt>
+<dd class="field-even"><p>Album title</p>
+</dd>
+<dt class="field-odd">Attribute date release_date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Album release date</p>
+</dd>
+<dt class="field-even">Attribute str label<span class="colon">:</span></dt>
+<dd class="field-even"><p>Record label</p>
+</dd>
+<dt class="field-odd">Attribute str description<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Album description</p>
+</dd>
+<dt class="field-even">Method<span class="colon">:</span></dt>
+<dd class="field-even"><p>__str__ method</p>
+</dd>
+</dl>
+<dl class="py exception">
+<dt class="sig sig-object py" id="sonicwave.models.Album.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#sonicwave.models.Album.DoesNotExist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="sonicwave.models.Album.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#sonicwave.models.Album.MultipleObjectsReturned" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sonicwave.models.Album.description">
+<span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#sonicwave.models.Album.description" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sonicwave.models.Album.get_next_by_release_date">
+<span class="sig-name descname"><span class="pre">get_next_by_release_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">release_date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sonicwave.models.Album.get_next_by_release_date" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sonicwave.models.Album.get_previous_by_release_date">
+<span class="sig-name descname"><span class="pre">get_previous_by_release_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.DateField:</span> <span class="pre">release_date&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_next=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sonicwave.models.Album.get_previous_by_release_date" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sonicwave.models.Album.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#sonicwave.models.Album.id" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sonicwave.models.Album.label">
+<span class="sig-name descname"><span class="pre">label</span></span><a class="headerlink" href="#sonicwave.models.Album.label" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sonicwave.models.Album.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sonicwave.models.Album.objects" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sonicwave.models.Album.release_date">
+<span class="sig-name descname"><span class="pre">release_date</span></span><a class="headerlink" href="#sonicwave.models.Album.release_date" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sonicwave.models.Album.title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#sonicwave.models.Album.title" title="Link to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-sonicwave.tests">
+<span id="sonicwave-tests-module"></span><h2>sonicwave.tests module<a class="headerlink" href="#module-sonicwave.tests" title="Link to this heading"></a></h2>
+</section>
+<section id="module-sonicwave.urls">
+<span id="sonicwave-urls-module"></span><h2>sonicwave.urls module<a class="headerlink" href="#module-sonicwave.urls" title="Link to this heading"></a></h2>
+</section>
+<section id="module-sonicwave.views">
+<span id="sonicwave-views-module"></span><h2>sonicwave.views module<a class="headerlink" href="#module-sonicwave.views" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="sonicwave.views.MyLoginView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sonicwave.views.</span></span><span class="sig-name descname"><span class="pre">MyLoginView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sonicwave/views.html#MyLoginView"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sonicwave.views.MyLoginView" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">LoginView</span></code></p>
+<p>This class is used to handle user login.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>username</strong> (<em>str</em>) – Valid username required</p></li>
+<li><p><strong>password</strong> (<em>str</em>) – Valid password required</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Redirects user to the home page</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sonicwave.views.MyLoginView.template_name">
+<span class="sig-name descname"><span class="pre">template_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'login.html'</span></em><a class="headerlink" href="#sonicwave.views.MyLoginView.template_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sonicwave.views.about">
+<span class="sig-prename descclassname"><span class="pre">sonicwave.views.</span></span><span class="sig-name descname"><span class="pre">about</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sonicwave/views.html#about"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sonicwave.views.about" title="Link to this definition"></a></dt>
+<dd><p>This view renders the about page of the website.
+It displays information about the band including its history, members
+and influences.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sonicwave.views.albums">
+<span class="sig-prename descclassname"><span class="pre">sonicwave.views.</span></span><span class="sig-name descname"><span class="pre">albums</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sonicwave/views.html#albums"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sonicwave.views.albums" title="Link to this definition"></a></dt>
+<dd><p>This view renders the albums page of the website.
+It displays a list of the band’s albums with a link to the information
+page of each album</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sonicwave.views.home">
+<span class="sig-prename descclassname"><span class="pre">sonicwave.views.</span></span><span class="sig-name descname"><span class="pre">home</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sonicwave/views.html#home"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sonicwave.views.home" title="Link to this definition"></a></dt>
+<dd><p>This view renders the home page of the website.
+It requires the user to be logged in and displays a navigation bar
+with links to the band’s about page and album page. The home page
+also displays a Sonicwave logo and a background image of a sound
+wave. The background image is a linear gradient</p>
+</dd></dl>
+
+</section>
+<section id="module-sonicwave">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-sonicwave" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="sonicwave" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sonicwave.migrations.html" class="btn btn-neutral float-right" title="sonicwave.migrations package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, John Kapia.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

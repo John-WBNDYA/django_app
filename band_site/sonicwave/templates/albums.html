@@ -1,0 +1,195 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonicwave - Albums</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <!-- Soun cloud icon source file-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+          rel="stylesheet">  
+    
+    <!-- Page styling -->
+    <style>
+        body{
+            background-color: #161616;
+            background-size: cover; /* Ensures the image covers the entire background */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            
+        }
+        .album-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .album {
+            background-color: #161616;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .album {
+                width: 100%; /* Stack items on smaller screens */
+            }
+        }
+
+        .album-art{
+            border-radius: 12px;
+        }
+
+        /* Hover effect for album art*/
+        .album-art:hover{
+            box-shadow: 0 0 15px #ff0303;
+            border: 3px solid #ff0000;
+            transition: 0.4s ease-out;
+        }
+
+
+        .footer {
+            background-color: #000;
+            color: #fff; 
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; 
+        }
+
+        .footer-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-link:hover {
+            color: #1DB954; 
+        }
+
+        .footer-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Albums Section -->
+    <section class="album-section text-center">
+        <br>
+        <div class="text-center">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'images/logo.png' %}" alt="Sonicwave logo"
+                 width="150" height="50"><h6 class="text-white">Sonicwave</h6>
+            </a>
+        </div><br><br><br><br><br>
+
+        <!-- Album art section -->
+         <!-- Album art used as links to album information -->
+        <div class="container-fluid">
+            <b><h1 class="text-white">Sonicwave Albums</h1></b>
+            <br><br><br>
+            <diV class="row">
+                <div class="col-md-4">
+                    <!-- Nexus Point Album -->
+                    <a href="#info">
+                        <img src="{% static 'images/NP.jpeg' %}" alt="" width="320" height="300" class="album-art">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <!-- Tidal Force Album -->
+                    <a href="#info">
+                        <img src="{% static 'images/TF.jpeg' %}" alt="" width="320" height="300" class="album-art">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <!-- Pallaex View Album -->
+                    <a href="#info">
+                        <img src="{% static 'images/PV.jpeg' %}" alt="" width="320" height="300" class="album-art">
+                    </a>
+                </div>
+            </diV><br><br><br>
+            <diV class="row">
+                <div class="col-md-4">
+                    <!-- Catalyst Album -->
+                    <a href="#info">
+                        <img src="{% static 'images/Ca.jpeg' %}" alt="" width="320" height="300" class="album-art">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <!-- Echo Flux Album -->
+                    <a href="#info">
+                        <img src="{% static 'images/EF.jpeg' %}" alt="" width="320" height="300" class="album-art">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <!-- Kairos Album -->
+                    <a href="#info">
+                        <img src="{% static 'images/K.jpeg' %}" alt="" width="320" height="300" class="album-art">
+                    </a>
+                </div>
+            </diV>
+        </div>
+        
+        <br><br><br><br><br><br>
+        <!-- Album information from database-->
+        <h1 class="text-white">Album information</h1>
+        <br><br>
+        <div class="album-container">  
+            <!-- loop through list of album objects-->  
+            {% for album in albums %}
+                <div class="album text-white" id="info">
+                    <!-- Display information -->
+                    <h2>{{ album.title }}</h2>
+                    <p>Release: {{ album.release_date }}</p>
+                    <p>Label: {{ album.label }}</p>
+                    <p>Description: {{ album.description }}</p>
+                </div>
+                <!-- If there are NO albums, Show a valid message -->
+            {% empty %}
+                <p>No albums available.</p>
+            {% endfor %}
+        </div>    
+                     
+        </div> <br><br><br><br>
+        <!-- Home button -->
+        <a href="{% url 'home' %}" class="btn btn-primary">Go to Home Page</a>
+        <br><br><br><br>
+        <!-- Album download links -->
+        <footer class="footer">
+            <div class="footer-content container-fluid">
+                <a href="https://open.spotify.com" target="_blank" class="footer-link">
+                    <i class="bi bi-spotify"> Spotify</i>
+                </a>
+                <a href="https://www.apple.com/music/" target="_blank" class="footer-link">
+                    <i class="bi bi-music-note-beamed"></i> Apple Music
+                </a>
+                <a href="https://music.amazon.com" target="_blank" class="footer-link">
+                    <i class="fab fa-amazon"></i> Amazon Music
+                </a>
+                <a href="https://soundcloud.com" target="_blank" class="footer-link">
+                    <i class="fab fa-soundcloud"></i> SoundCloud
+                </a>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>
+
